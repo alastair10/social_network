@@ -14,8 +14,8 @@ class PostsRepository
       post.id = record['id'].to_i
       post.title = record['title']
       post.content = record['content']
-      post.views = record['views']
-      post.account_id = record['account_id']
+      post.views = record['views'].to_i
+      post.account_id = record['account_id'].to_i
 
       posts << post
     end

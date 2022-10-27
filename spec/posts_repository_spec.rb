@@ -22,6 +22,7 @@ describe PostsRepository do
       expect(posts.first.title).to eq('update')
       expect(posts.first.content).to eq('I am trying to be a developer!')
       expect(posts.first.id).to eq(1)
+      expect(posts.first.account_id).to eq(0)
     end
   end
 
@@ -58,7 +59,7 @@ describe PostsRepository do
 
       expect(last_post.title).to eq('encouragement') 
       expect(last_post.content).to eq("Don't worry. Keep going.") 
-      expect(last_post.views).to eq('0')
+      expect(last_post.views).to eq(0)
 
     end
   end
