@@ -22,7 +22,9 @@ describe PostsRepository do
       expect(posts.first.title).to eq('update')
       expect(posts.first.content).to eq('I am trying to be a developer!')
       expect(posts.first.id).to eq(1)
-      expect(posts.first.account_id).to eq(0)
+      #expect(posts.first.account_id).to eq(0)
+      puts "First account_id #{posts.first.account_id}"
+      puts "Last account_id #{posts.last.account_id}"
     end
   end
 
@@ -36,6 +38,7 @@ describe PostsRepository do
       expect(posts.title).to eq('success')  
       expect(posts.content).to eq('I AM HIRED AS A DEVELOPER!')  
       expect(posts.views).to eq(1000000)
+      puts posts.account_id
     end
   end
 

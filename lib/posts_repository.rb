@@ -15,7 +15,7 @@ class PostsRepository
       post.title = record['title']
       post.content = record['content']
       post.views = record['views'].to_i
-      post.account_id = record['account_id'].to_i
+      post.account_id = record['account_id'].to_i  # why is this zero for every instance?
 
       posts << post
     end
